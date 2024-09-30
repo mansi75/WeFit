@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "35488729563",
+    "project_id": "mfit-82701",
+    "storage_bucket": "mfit-82701.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35488729563:android:ddcea96f94fcef5faf3ffe",
+        "android_client_info": {
+          "package_name": "com.example.mfit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvKRH-EJAk9ae5uQAbNcEFv1nXLD9V57w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

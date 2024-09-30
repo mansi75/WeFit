@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WeFit</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Steps Counter</string>
+    <string name="title_notifications">Profile</string>
+    <string name="channel_name">stepsNotification</string>
+    <string name="channel_description">steps</string>
+    <string name="title_activity_startup">StartupActivity</string>
+</resources>

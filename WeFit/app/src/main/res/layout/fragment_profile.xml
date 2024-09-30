@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink_200"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:cardBackgroundColor="@color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/TextAppearance.Material3.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:fontFamily="casual"
+                android:text="Profile"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintWidth_percent="0.075"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/baseline_logout_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:tint="@color/white" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/profileImage"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/circularImageView"
+            android:layout_width="145dp"
+            android:layout_height="145dp"
+            android:src="@drawable/pexels1"
+            app:strokeWidth="3dp"
+            android:background="@color/pink_200"
+            android:scaleType="fitCenter"
+            app:strokeColor="@android:color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="4dp"
+            app:shapeAppearanceOverlay="@style/CircularShape"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@color/white"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="4dp"
+            android:src="@drawable/baseline_edit_24"
+            app:shapeAppearanceOverlay="@style/CircularShape"
+            android:layout_gravity="end|bottom"/>
+
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/userNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Utkarsh Sharma"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/text_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileImage"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/statsCl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/userNameTv">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintWidth_percent="0.30"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cv2"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="2dp"
+            android:backgroundTint="@color/teal_100">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="casual"
+                    android:textColor="@color/text_black"
+                    android:layout_marginStart="8dp"
+                    android:text="Weight Goal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/weightGoalTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_black"
+                        android:fontFamily="@font/adlam_display"
+                        android:text="53"
+                        android:textSize="28sp" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=" kg"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintWidth_percent="0.30"
+            app:layout_constraintStart_toEndOf="@id/cv1"
+            app:layout_constraintEnd_toStartOf="@id/cv3"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="2dp"
+            android:backgroundTint="@color/blue_150">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="casual"
+                    android:textColor="@color/text_black"
+                    android:layout_marginStart="8dp"
+                    android:text="Weight Goal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/wtGoalTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_black"
+                        android:fontFamily="@font/adlam_display"
+                        android:text="53"
+                        android:textSize="28sp" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=" kg"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.30"
+            app:layout_constraintStart_toEndOf="@id/cv2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="2dp"
+            android:backgroundTint="@color/saffron_300">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="casual"
+                    android:textColor="@color/text_black"
+                    android:layout_marginStart="8dp"
+                    android:text="Daily Calorie Burn" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/calBurnTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_black"
+                        android:fontFamily="@font/adlam_display"
+                        android:text="1740"
+                        android:textSize="28sp" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="calories"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@id/statsCl">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:id="@+id/postsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Posts"
+                android:textColor="@color/text_black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPosts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/postsTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!--<FrameLayout
+        android:layout_width="145dp"
+        android:layout_height="145dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="145dp"
+            android:layout_height="145dp"
+            app:cardCornerRadius="230dp"
+            android:layout_gravity="center"
+            android:elevation="0dp"
+            app:cardBackgroundColor="@color/white">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                app:cardCornerRadius="230dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/pexels1"
+                    android:scaleType="fitCenter"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/descTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="70dp"
+            android:background="@android:color/holo_blue_light"
+            android:padding="10dp"
+            android:text="TextView placed at the top of the Imageview"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+    </FrameLayout>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
