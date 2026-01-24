@@ -43,5 +43,9 @@ WeFit is an Android fitness application that helps users maintain a healthy life
    ```bash
    git clone https://github.com/your-username/fitlife-android.git
 
+2. Open the project in Android Studio
+3. Sync Gradle files
+4. Run the app on an emulator or Android device
+
 
 
