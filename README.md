@@ -31,8 +31,17 @@ WeFit is an Android fitness application that helps users maintain a healthy life
 - **Build System:** Gradle
 - **Sensors:** Android Step Counter Sensor
 
----
+## 🚀 How to Run the Project
 
-## 📂 Project Structure
+### Prerequisites
+- Android Studio
+- Android SDK (API level 21 or higher)
+- Android Emulator or Physical Device
+
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/fitlife-android.git
+
 
 
